@@ -20,8 +20,14 @@ class Population{
       
     }
     dots[0].show();
-  }
-  
+    fill(0,0,0);
+    text("Generation: ",20,20);
+    text(generation,110,20);
+    if(minsteps<800){
+      text("Min Steps: ", 20, 50);
+      text(minsteps,110,50);
+    }  
+    
   void update(){
     for (int i = 0; i<dots.length; i++){
       if (dots[i].brain.step > minsteps){
